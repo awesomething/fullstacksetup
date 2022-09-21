@@ -2,7 +2,7 @@ const React = require('react')
 const Default = require('./layout/default')
 
 function Show ({food}) {
-    // Confirm we are getting our bread data in the terminal.
+    // Confirm we are getting our data in the terminal.
       return (
         <Default>
         <h3>{food.name}</h3>
