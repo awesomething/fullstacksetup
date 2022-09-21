@@ -22,6 +22,10 @@ app.use(express.static('public'))
 const foodsController = require('./controllers/foods_controller')
 app.use('/foods', foodsController)
 
+// 404 Page
+app.get('*', (req, res) => {
+  res.send('404')
+})
 // LISTEN
 app.listen(PORT, () => {
   console.log('listening on port', PORT);

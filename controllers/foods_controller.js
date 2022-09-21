@@ -17,9 +17,13 @@ foods.get('/', (req, res)=>{
 
 // SHOW
 foods.get('/:arrayIndex', (req, res) => {
+    if(Food[req.params.arrayIndex]){
     res.render('Show', {
       food: Food[req.params.arrayIndex]
     })
+    }else{
+        res.send('404')
+    }
   })
   
 module.exports = foods
